@@ -1,0 +1,96 @@
+.page-header {
+    border-bottom: 1px solid #ececec;
+
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+}
+
+.page-header__container {
+    display: flex;
+    align-items: center;
+}
+
+/* Навигация */
+.nav {
+    display: flex;
+    align-items: center;
+    margin-right: 300px;
+}
+
+.nav__list {
+    display: flex;
+}
+
+.nav__item:not(:last-child) {
+    margin-right: 50px;
+}
+
+.nav__link {
+    display: block;
+    padding-top: 32px;
+
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    color: var(--nohover-navlink-color);
+
+    transition: color $animation-transition;
+
+    &:hover,
+    &:focus {
+        color: getColorText('hover');
+    }
+
+    &:not(.nav__current) {
+        padding-bottom: 28px;
+    }
+}
+/* Подсвечивание текущей страницы */
+.nav__link.nav__current {
+    color: getColorText('hover');
+
+    &::after {
+        content: '';
+        margin-top: 28px;
+        
+        display: block;
+        width: 100%;
+        height: 4px;
+        background-color: getColorText('hover');
+        border-radius: 2px;
+    }
+}
+
+/* Каналы связи со студией */
+.contacts {
+    display: flex;
+}
+
+.contacts__item:not(:last-child) {
+    margin-right: 30px;
+}
+
+.contacts__link {
+    display: flex;
+    align-items: center;
+    padding-top: 32px;
+    padding-bottom: 32px;
+
+    letter-spacing: 0.02em;
+    color: getColorText('primary');
+
+    transition: color $animation-transition;
+
+    &:hover,
+    &:focus {
+        color: getColorText('hover');
+    }
+}
+
+.contacts__icon {
+    fill: currentColor;
+    margin-right: 11px;
+}

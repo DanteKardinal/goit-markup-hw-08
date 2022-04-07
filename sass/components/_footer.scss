@@ -1,0 +1,123 @@
+.page-footer {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color: #2f303a;
+}
+
+.page-footer__container {
+    display: flex;
+    align-items: baseline;
+}
+
+.page-footer__contacts {
+    margin-right: 70px;
+}
+
+.page-footer__subtitle {
+    margin-bottom: 20px;
+
+    line-height: 1.14;
+    letter-spacing: $primary-letter-spacing;
+    text-transform: uppercase;
+    color: getColorText('text-white');
+}
+
+// Адрес студии
+.address {
+    margin-top: 20px;
+
+    font-style: normal;
+    font-size: 14px;
+    line-height: 1.7;
+    color: getColorText(text-white);
+}
+
+.address__text {
+    margin-bottom: 9px;
+
+    letter-spacing: $primary-letter-spacing;
+}
+
+.address__item:not(:first-child) {
+     margin-top: 9px;
+}
+
+.address__contacts {
+    letter-spacing: $primary-letter-spacing;
+    color: getColorText('communication');
+
+    transition: color $animation-transition;
+
+    &:hover,
+    &:focus {
+        color: getColorText('hover');
+    }
+}
+
+/* Социальные сети футера */
+.page-footer__socials {
+    margin-right: 93px;
+}
+
+.page-footer__list {
+    display: flex;
+    align-items: center;
+}
+
+.page-footer__item:not(:last-child) {
+    margin-right: 10px;
+}
+
+.page-footer__socials-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    fill: getFill('white-fill');
+
+    transition: background-color $animation-transition;
+
+    &:hover,
+    &:focus {
+        background-color: getBgc('bgc-blue');
+    }
+}
+
+/* Footer Форма подписки */
+.page-footer__field {
+    display: flex;
+}
+
+.page-footer__field-email {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.25;
+
+    /* identical to box height, or 125% */
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.03em;
+
+    width: 358px;
+    padding-left: 16px;
+
+    color: rgba(255, 255, 255, 0.6);
+    background-color: rgba(0, 0, 0, 0);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+}
+.page-footer__btn {
+    padding-top: 10px;
+    padding-right: 28px;
+    padding-bottom: 10px;
+    padding-left: 29px;
+    margin-left: 12px;
+}
+
+.page-footer__icon {
+    margin-left: 10px;
+    fill: getFill('white-fill');
+}

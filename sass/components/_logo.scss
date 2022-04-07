@@ -1,0 +1,24 @@
+/* Логотип */
+.logo {
+    font-family: $logo-font;
+    font-weight: bold;
+    font-size: 26px;
+    line-height: 1.2;
+    letter-spacing: $primary-letter-spacing;
+}
+
+.page-header__logo {
+    margin-right: 93px;
+}
+
+.logo-web {
+    color: getColorText('hover');
+}
+
+.logo-studio {
+    color: #000000;
+}
+
+.footer__logo-studio {
+    color: getColorText('text-white');
+}

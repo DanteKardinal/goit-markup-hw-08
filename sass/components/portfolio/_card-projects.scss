@@ -1,0 +1,84 @@
+.ourproject {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: calc(-1 * #{$card-set-gap});
+    margin-left: calc(-1 * #{$card-set-gap});
+}
+
+.ourproject__link {
+    display: inline-block;
+    margin-top: $card-set-gap;
+    margin-left: $card-set-gap;
+    flex-basis: calc(100% / 3 - $card-set-gap);
+    cursor: pointer;
+    transition: box-shadow $animation-transition;
+
+    &:hover,
+    &:focus {
+        box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+            1px 4px 6px rgba(0, 0, 0, 0.16);
+    }
+
+    &:hover .ourproject__text-hover,
+    &:focus .ourproject__text-hover {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* Анимированый текст при hover */
+.ourproject__wrap-hover {
+    position: relative;
+    overflow: hidden;
+}
+
+.ourproject__text-hover {
+    display: block;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    padding-top: 63px;
+    padding-right: 24px;
+    padding-bottom: 63px;
+    padding-left: 24px;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateY(100%);
+    transition: transform $animation-transition, opacity $animation-transition;
+
+    background-color: getBgc('bgc-blue');
+    font-size: 18px;
+    line-height: 1.56;
+    letter-spacing: var(--primary-letter-spacing);
+    color: getColorText('text-white');
+    opacity: 0;
+}
+/* Название и описание карточки проекта */
+.ourproject__wrap {
+    padding-top: 20px;
+    padding-right: 24px;
+    padding-bottom: 20px;
+    padding-left: 24px;
+
+    border-right: 1px solid $border-card-color;
+    border-bottom: 1px solid $border-card-color;
+    border-left: 1px solid $border-card-color;
+}
+
+.ourproject__subtitle {
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 36px;
+    letter-spacing: 0.06em;
+    color: getColorText('text-black');
+}
+
+.ourproject__text {
+    margin-top: 4;
+
+    color: getColorText('primary');
+    font-size: 16px;
+    line-height: 30px;
+    letter-spacing: $primary-letter-spacing;
+}

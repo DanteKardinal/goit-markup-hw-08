@@ -1,0 +1,18 @@
+@import './utils/variables';
+
+// Components
+@import './components/common';
+@import './components/header';
+@import './components/footer';
+@import './components/logo';
+@import './components/hero';
+@import './components/about';
+@import './components/services';
+@import './components/team';
+@import './components/clients';
+
+@import './components/form-order';
+
+// Portfolio
+@import './components/portfolio/button-filter';
+@import './components/portfolio/card-projects'

@@ -1,0 +1,42 @@
+@function getColorText($key) {
+    @return map-get($color-text, $key);
+}
+@function getBgc($key) {
+    @return map-get($bgc, $key);
+}
+@function getFill($key) {
+    @return map-get($fill, $key);
+}
+
+$color-text: ('primary': #757575,
+    'text-black': #212121,
+    'title': #212121,
+    'text-white': #ffffff,
+    'hover': #2196f3,
+    'communication': rgba(255, 255, 255, 0.6),
+    'button': #ffffff,
+
+);
+
+$bgc: ('backdrop': rgba(0, 0, 0, 0.2),
+    'primary-white': #ffffff,
+    'bgc-blue': #2196f3,
+    'portfolio-hover': rgba(33, 150, 243, 0.9),
+    'button-hover': #188CE8,
+);
+
+$fill: ('primary-fill': #afb1b8,
+    'social-fill': #757575,
+    'white-fill': #ffffff,
+    'blue-fill': #2196f3,
+);
+
+$logo-font: 'Raleway', sans-serif;
+$primary-font: 'Roboto', sans-serif;
+$primary-letter-spacing: 0.03em;
+
+$border-form-color: #2196f3;
+$border-card-color: #eeeeee;
+
+$card-set-gap: 30px;
+$animation-transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
