@@ -1,16 +1,40 @@
 .client__list {
-    display: flex;
+    @media screen and (min-width: 768px) {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    @media screen and (min-width: 1200px) {
+        
+    }
+   
 }
 
 .client__item:not(:last-child) {
-    margin-right: $card-set-gap;
+    @media screen and (min-width: 480px) {
+        &:not(:nth-child(2n)) {
+            margin-bottom: $card-set-gap;
+        }
+    }
+    
+    @media screen and (min-width: 768px) {
+        &:not(:nth-child(3n)) {
+            margin-right: $card-set-gap;
+        }
+    }
+    
+    @media screen and (min-width: 1200px) {
+        &:not(:last-child) {
+            margin-right: $card-set-gap;
+        }
+    }
 }
 
 .client__link {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 170px;
+    
     height: 92px;
 
     border: 1px solid #afb1b8;
@@ -18,6 +42,18 @@
     fill: getFill('primary-fill');
 
     transition: fill $animation-transition, border-color $animation-transition;
+
+    @media screen and (min-width: 480px) {
+        width: 210px;
+    }
+
+    @media screen and (min-width: 768px) {
+        width: 226px
+    };
+    
+    @media screen and (min-width: 1200px) {
+        width: 170px;
+    }
 
     &:hover,
     &:focus {
