@@ -3,37 +3,24 @@
 }
 
 .about__list {
-    @media screen and (min-width: 768px) {
-        display: flex;
-        flex-wrap: wrap;
-    }
-
-    @media screen and (min-width: 1200px) { 
-        display: flex;
-        flex-wrap: nowrap;
-    }
-   
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
 }
 
 .about__item {
-    @media screen and (min-width: 480px) {
-        &:not(:last-child){
-        margin-bottom: 30px;
-        }
+    @media screen and (min-width: $mobile) {
+        width: calc((100% - 1 * 30px) / 1);
+        margin: 15px;
     }
 
-    @media screen and (min-width: 768px) {
-        width: 354px;
-        &:not(:nth-child(2n)){
-        margin-right: 30px;
-        }
+    @media screen and (min-width: $tablet) {
+        width: calc((100% - 2 * 30px) / 2);
+        
     }
 
-    @media screen and (min-width: 1200px) {
-        width: 270px;
-        &:not(:last-child){
-        margin-right: 30px;
-        }
+    @media screen and (min-width: $desktop) {
+        width: calc((100% - 4 * 30px) / 4);
     }
 }
 /* Основная часть секции Наши преимущества*/

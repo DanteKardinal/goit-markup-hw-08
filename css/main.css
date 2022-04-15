@@ -468,47 +468,31 @@ textarea {
   padding-bottom: 0;
 }
 
-@media screen and (min-width: 768px) {
-  .about__list {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .about__list {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: nowrap;
-        flex-wrap: nowrap;
-  }
+.about__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: -15px;
 }
 
 @media screen and (min-width: 480px) {
-  .about__item:not(:last-child) {
-    margin-bottom: 30px;
+  .about__item {
+    width: calc((100% - 1 * 30px) / 1);
+    margin: 15px;
   }
 }
 
 @media screen and (min-width: 768px) {
   .about__item {
-    width: 354px;
-  }
-  .about__item:not(:nth-child(2n)) {
-    margin-right: 30px;
+    width: calc((100% - 2 * 30px) / 2);
   }
 }
 
 @media screen and (min-width: 1200px) {
   .about__item {
-    width: 270px;
-  }
-  .about__item:not(:last-child) {
-    margin-right: 30px;
+    width: calc((100% - 4 * 30px) / 4);
   }
 }
 
