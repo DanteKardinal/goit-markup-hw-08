@@ -1,32 +1,21 @@
 .client__list {
-    @media screen and (min-width: 768px) {
         display: flex;
         flex-wrap: wrap;
-    }
-    
-    @media screen and (min-width: 1200px) {
-        
-    }
-   
+        margin: -15px;
 }
 
-.client__item:not(:last-child) {
+.client__item {
+    margin: 15px;
     @media screen and (min-width: 480px) {
-        &:not(:nth-child(2n)) {
-            margin-bottom: $card-set-gap;
-        }
+        width: calc((100% - 2 * 30px) / 2);
     }
     
     @media screen and (min-width: 768px) {
-        &:not(:nth-child(3n)) {
-            margin-right: $card-set-gap;
-        }
+        width: calc((100% - 3 * 30px) / 3);
     }
     
     @media screen and (min-width: 1200px) {
-        &:not(:last-child) {
-            margin-right: $card-set-gap;
-        }
+        width: calc((100% - 6 * 30px) / 6);
     }
 }
 
@@ -42,18 +31,6 @@
     fill: getFill('primary-fill');
 
     transition: fill $animation-transition, border-color $animation-transition;
-
-    @media screen and (min-width: 480px) {
-        width: 210px;
-    }
-
-    @media screen and (min-width: 768px) {
-        width: 226px
-    };
-    
-    @media screen and (min-width: 1200px) {
-        width: 170px;
-    }
 
     &:hover,
     &:focus {
