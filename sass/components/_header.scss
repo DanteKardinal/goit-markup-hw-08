@@ -10,12 +10,15 @@
 }
 
 .page-header__container {
-    // display: flex;
-    // align-items: center;
+    @media screen and (min-width: $tablet) {
+        display: flex;
+        align-items: center;
+    }
 }
 // Кнопка переключателя мобильного меню
 .nav__btn-mobile {
-    display: inline-flex;
+    @media screen and (max-width: $tablet-max) {
+        display: inline-flex;
     margin: 0;
     padding: 0;
     border: none;
@@ -36,6 +39,10 @@
     &.is-open .nav__icon-menu {
         display: none;
     }
+    }
+    @media screen and (min-width: $tablet) {
+        display: none;
+    }
 }
 
 /* Навигация */
@@ -43,12 +50,16 @@
     @media screen and (min-width: $tablet) {
         display: flex;
         align-items: center;
+        margin-right: 84px;
+    }
+    @media screen and (min-width: $desktop) {
         margin-right: 300px;
     }
 }
 
 .nav__list {
     @media screen and (max-width: $tablet-max) {
+        display: none;
         position: absolute;
         top: 100%;
         left: 0%;
@@ -103,24 +114,26 @@
 
 /* Каналы связи со студией */
 .contacts {
-    position: relative;
     @media screen and (min-width: $tablet) {
         display: flex;
     }
+    @media screen and (min-width: $tablet), (max-width: $desktop-max) {
+        flex-wrap: wrap;
+    }
 }
 .contacts__item {
-    position: absolute;
+    // @media screen and (max-width: $tablet-max) {
+    //     position: absolute;
+    // }
+    @media screen and (min-width: $desktop) {
+        &:not(:last-child) {
+        margin-right: 30px;
+        }
+    }
 }
-.contacts__item:not(:last-child) {
-    margin-right: 30px;
-}
+
 
 .contacts__link {
-    display: flex;
-    align-items: center;
-    padding-top: 32px;
-    padding-bottom: 32px;
-
     letter-spacing: 0.02em;
     color: getColorText('primary');
 
@@ -129,6 +142,17 @@
     &:hover,
     &:focus {
         color: getColorText('hover');
+    }
+
+    @media screen and (min-width: $tablet) {
+        display: flex;
+        align-items: center;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+    @media screen and (min-width: $desktop) {
+        padding-top: 32px;
+        padding-bottom: 32px;
     }
 }
 
