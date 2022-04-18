@@ -119,6 +119,7 @@ textarea {
 }
 
 .page-header {
+  position: relative;
   border-bottom: 1px solid #ececec;
   font-weight: 500;
   font-size: 14px;
@@ -126,30 +127,63 @@ textarea {
   letter-spacing: 0.02em;
 }
 
-.page-header__container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+.nav__btn-mobile {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nav__btn-mobile:hover, .nav__btn-mobile:focus {
+  fill: #2196f3;
+}
+
+.nav__btn-mobile .nav__icon-cross {
+  display: none;
+}
+
+.nav__btn-mobile.is-open .nav__icon-cross {
+  display: block;
+}
+
+.nav__btn-mobile.is-open .nav__icon-menu {
+  display: none;
 }
 
 /* Навигация */
-.nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin-right: 300px;
+@media screen and (min-width: 768px) {
+  .nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-right: 300px;
+  }
 }
 
-.nav__list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+@media screen and (max-width: 767px) {
+  .nav__list {
+    position: absolute;
+    top: 100%;
+    left: 0%;
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .nav__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 
 .nav__item:not(:last-child) {
@@ -193,9 +227,19 @@ textarea {
 
 /* Каналы связи со студией */
 .contacts {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  position: relative;
+}
+
+@media screen and (min-width: 768px) {
+  .contacts {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+.contacts__item {
+  position: absolute;
 }
 
 .contacts__item:not(:last-child) {
@@ -518,6 +562,12 @@ textarea {
   margin-bottom: 30px;
   background-color: #f5f4fa;
   border-radius: 4px;
+}
+
+@media screen and (max-width: 1199px) {
+  .services {
+    display: none;
+  }
 }
 
 .services__list {

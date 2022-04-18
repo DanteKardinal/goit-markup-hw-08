@@ -22,12 +22,24 @@
     <!--Шапка сайта-->
     <header class="page-header">
       <div class="container page-header__container">
-        <!--Блок навигации по страницам-->
+        <!-- <div class="page-header__nav-container"> -->
         <nav class="nav">
           <!-- Логотип -->
           <a href="./index.html" lang="en" class="logo page-header__logo">
             <span class="logo-web">Web</span><span class="logo-studio">Studio</span>
           </a>
+          <!-- Кнопка переключателя мобильного меню -->
+          <button
+            type="button"
+            class="nav__btn-mobile is-open"
+            data-menu-button
+            aria-expanded="false"
+          >
+            <svg width="40" height="40" aria-label="Переключатель мобильного меню">
+              <use class="nav__icon-cross" href="./images/svg/icon.svg#cross"></use>
+              <use class="nav__icon-menu" href="./images/svg/icon.svg#menu"></use>
+            </svg>
+          </button>
           <!-- Навигация по сайту -->
           <ul class="nav__list">
             <li class="nav__item nav-item-current">
@@ -61,6 +73,7 @@
             </a>
           </li>
         </ul>
+        <!-- </div> -->
       </div>
     </header>
 
@@ -134,7 +147,7 @@
       </section>
 
       <!--Чем Мы занимаемся-->
-      <section class="section">
+      <section class="section services">
         <div class="container">
           <h2 class="title-section">Чем мы занимаемся</h2>
           <ul class="services__list">
@@ -561,5 +574,6 @@
 
     <!-- JavaScript для модального окна -->
     <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>

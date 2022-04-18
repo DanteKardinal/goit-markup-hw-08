@@ -1,3 +1,9 @@
+.services {
+    @media screen and (max-width: $desktop-max) {
+        display: none;
+    }
+}
+
 .services__list {
     display: flex;
 }

@@ -1,4 +1,6 @@
 .page-header {
+    position: relative;
+
     border-bottom: 1px solid #ececec;
 
     font-weight: 500;
@@ -8,19 +10,54 @@
 }
 
 .page-header__container {
-    display: flex;
-    align-items: center;
+    // display: flex;
+    // align-items: center;
+}
+// Кнопка переключателя мобильного меню
+.nav__btn-mobile {
+    display: inline-flex;
+    margin: 0;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    transition: fill $animation-transition;
+
+    &:hover, &:focus {
+        fill: getFill('blue-fill');
+    }
+
+    & .nav__icon-cross {
+        display: none;
+    }
+    &.is-open .nav__icon-cross {
+        display: block;
+    }
+    &.is-open .nav__icon-menu {
+        display: none;
+    }
 }
 
 /* Навигация */
 .nav {
-    display: flex;
-    align-items: center;
-    margin-right: 300px;
+    @media screen and (min-width: $tablet) {
+        display: flex;
+        align-items: center;
+        margin-right: 300px;
+    }
 }
 
 .nav__list {
-    display: flex;
+    @media screen and (max-width: $tablet-max) {
+        position: absolute;
+        top: 100%;
+        left: 0%;
+        width: 100%;
+    }
+    
+    @media screen and (min-width: $tablet) {
+        display: flex;
+    }
 }
 
 .nav__item:not(:last-child) {
@@ -66,9 +103,14 @@
 
 /* Каналы связи со студией */
 .contacts {
-    display: flex;
+    position: relative;
+    @media screen and (min-width: $tablet) {
+        display: flex;
+    }
 }
-
+.contacts__item {
+    position: absolute;
+}
 .contacts__item:not(:last-child) {
     margin-right: 30px;
 }
