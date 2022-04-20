@@ -8,6 +8,8 @@
     transition: opacity $animation-transition, visibility $animation-transition;
 
     background-color: getBgc('backdrop');
+
+    overflow-y: scroll;
 }
 
 .backdrop.is-hidden {
@@ -17,19 +19,28 @@
 }
 
 .order {
+    
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-
-    min-width: 528px;
-    min-height: 581px;
+   
     padding: 40px;
 
     background-color: getBgc('primary-white');
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
         0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
+
+    @media screen and (max-width: $mobile-max), (min-width: $mobile) {
+        min-width: 450px;
+        min-height: 609px;
+    }
+
+    @media screen and (min-width: $desktop) {
+        min-width: 528px;
+        min-height: 581px;
+    }
 }
 
 .order__close-btn {

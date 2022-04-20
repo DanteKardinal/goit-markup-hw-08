@@ -5,6 +5,9 @@ body {
     line-height: 1.14;
     color: getColorText('primary');
 }
+body.modal-open {
+    overflow: hidden;
+}
 
 h1, h2, h3, h4, h5, h6, p, ul {
     margin: 0;
@@ -80,7 +83,7 @@ textarea {
 }
 
 .section {
-    @media screen and (min-width: 480px) and (max-width: 768px) {
+    @media screen and (max-width: $mobile-max), (min-width: $mobile) {
         padding-top: 60px;
         padding-bottom: 60px;
     }
