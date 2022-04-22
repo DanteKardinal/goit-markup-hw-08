@@ -10,6 +10,12 @@
     background-color: getBgc('backdrop');
 
     overflow-y: scroll;
+
+    @media screen and (max-width: $mobile-max), (min-width: $mobile) {
+        padding-top: 40px;
+        padding-right: 15px;
+        padding-left: 15px;
+    }
 }
 
 .backdrop.is-hidden {
@@ -19,12 +25,7 @@
 }
 
 .order {
-    
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-   
+    position: relative;
     padding: 40px;
 
     background-color: getBgc('primary-white');
@@ -37,6 +38,12 @@
         min-height: 609px;
     }
 
+    @media screen and (min-width: $tablet), (max-width: $tablet-max) {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
     @media screen and (min-width: $desktop) {
         min-width: 528px;
         min-height: 581px;

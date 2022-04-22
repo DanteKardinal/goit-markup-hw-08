@@ -821,6 +821,14 @@ textarea {
   overflow-y: scroll;
 }
 
+@media screen and (max-width: 479px), (min-width: 480px) {
+  .backdrop {
+    padding-top: 40px;
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+}
+
 .backdrop.is-hidden {
   opacity: 0;
   pointer-events: none;
@@ -828,11 +836,7 @@ textarea {
 }
 
 .order {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  position: relative;
   padding: 40px;
   background-color: #ffffff;
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -844,6 +848,16 @@ textarea {
   .order {
     min-width: 450px;
     min-height: 609px;
+  }
+}
+
+@media screen and (min-width: 768px), (max-width: 767px) {
+  .order {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
   }
 }
 
