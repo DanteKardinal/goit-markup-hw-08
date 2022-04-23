@@ -11,8 +11,13 @@
 
     overflow-y: scroll;
 
+<<<<<<< Updated upstream
     @media screen and (max-width: $mobile-max), (min-width: $mobile) {
         padding-top: 40px;
+=======
+    @media screen and (max-width: $mobile-max) {
+        padding-top: 93px;
+>>>>>>> Stashed changes
         padding-right: 15px;
         padding-left: 15px;
     }
@@ -33,17 +38,25 @@
         0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
 
-    @media screen and (max-width: $mobile-max), (min-width: $mobile) {
-        min-width: 450px;
+
+    @media screen and (max-width: $mobile-max) {
         min-height: 609px;
     }
 
+<<<<<<< Updated upstream
     @media screen and (min-width: $tablet), (max-width: $tablet-max) {
+=======
+    @media screen and (min-width: $tablet) {
+>>>>>>> Stashed changes
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
     }
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
     @media screen and (min-width: $desktop) {
         min-width: 528px;
         min-height: 581px;

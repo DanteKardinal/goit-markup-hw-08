@@ -5,12 +5,30 @@
 }
 
 .page-footer__container {
-    // display: flex;
-    // align-items: baseline;
+    @media screen and (max-width: $desktop-max) {
+        text-align: center;
+    }
+    @media screen and (min-width: $desktop) {
+        display: flex;
+        align-items: baseline; 
+    }
+
 }
 
 .page-footer__contacts {
-    margin-right: 70px;
+    @media screen and (max-width: $desktop-max) {
+        text-align: center;
+    }
+    @media screen and (max-width: $tablet-max) {
+        margin-bottom: 60px;
+    }
+    @media screen and (min-width: $tablet) {
+        display: inline-block;
+        margin-right: 165px;
+    }
+    @media screen and (min-width: $desktop) {
+        margin-right: 70px;
+    }
 }
 
 .page-footer__subtitle {
@@ -56,7 +74,16 @@
 
 /* Социальные сети футера */
 .page-footer__socials {
-    margin-right: 93px;
+    @media screen and (max-width: $tablet-max) {
+        margin-bottom: 60px;
+    }
+    @media screen and (max-width: $desktop-max) {
+        display: inline-block;
+    }
+        
+    @media screen and (min-width: $desktop) {
+        margin-right: 93px;
+    }
 }
 
 .page-footer__list {
@@ -88,33 +115,55 @@
 
 /* Footer Форма подписки */
 .page-footer__field {
-    display: flex;
+    @media screen and (max-width: $mobile-max), (min-width: $mobile) {
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    @media screen and (min-width: $desktop) {
+        display: flex;
+    }
 }
 
 .page-footer__field-email {
     font-weight: 400;
     font-size: 16px;
     line-height: 1.25;
-
     /* identical to box height, or 125% */
-    display: flex;
-    align-items: center;
     letter-spacing: 0.03em;
 
-    width: 358px;
+    height: 50px;
     padding-left: 16px;
 
     color: rgba(255, 255, 255, 0.6);
     background-color: rgba(0, 0, 0, 0);
     border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 4px;
+
+    @media screen and (max-width: $desktop-max) {
+        max-width: 450px;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    @media screen and (min-width: $desktop) {
+        width: 358px;
+    }
 }
 .page-footer__btn {
     padding-top: 10px;
     padding-right: 28px;
     padding-bottom: 10px;
     padding-left: 29px;
-    margin-left: 12px;
+
+    @media screen and (max-width: $desktop-max) {
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    @media screen and (min-width: $desktop) {
+        margin-left: 12px;
+    }
 }
 
 .page-footer__icon {
