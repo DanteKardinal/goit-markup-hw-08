@@ -19,7 +19,7 @@
     @media screen and (max-width: $desktop-max) {
         text-align: center;
     }
-    @media screen and (max-width: $tablet-max) {
+    @media screen and (max-width: $desktop-max) {
         margin-bottom: 60px;
     }
     @media screen and (min-width: $tablet) {
@@ -34,10 +34,19 @@
 .page-footer__subtitle {
     margin-bottom: 20px;
 
+    font-size: 14px;
     line-height: 1.14;
     letter-spacing: $primary-letter-spacing;
     text-transform: uppercase;
     color: getColorText('text-white');
+}
+
+.pade-footer__tablet-container {
+    @media screen and (min-width: $tablet) {
+        display: flex;
+        justify-content: center;
+        align-items: baseline;
+    }
 }
 
 // Адрес студии
@@ -77,10 +86,7 @@
     @media screen and (max-width: $tablet-max) {
         margin-bottom: 60px;
     }
-    @media screen and (max-width: $desktop-max) {
-        display: inline-block;
-    }
-        
+       
     @media screen and (min-width: $desktop) {
         margin-right: 93px;
     }
@@ -88,7 +94,7 @@
 
 .page-footer__list {
     display: flex;
-    align-items: center;
+    justify-content: center;
 }
 
 .page-footer__item:not(:last-child) {

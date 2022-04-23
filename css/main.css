@@ -338,7 +338,7 @@ textarea {
   }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1199px) {
   .page-footer__contacts {
     margin-bottom: 60px;
   }
@@ -359,10 +359,25 @@ textarea {
 
 .page-footer__subtitle {
   margin-bottom: 20px;
+  font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: #ffffff;
+}
+
+@media screen and (min-width: 768px) {
+  .pade-footer__tablet-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+  }
 }
 
 .address {
@@ -400,12 +415,6 @@ textarea {
   }
 }
 
-@media screen and (max-width: 1199px) {
-  .page-footer__socials {
-    display: inline-block;
-  }
-}
-
 @media screen and (min-width: 1200px) {
   .page-footer__socials {
     margin-right: 93px;
@@ -416,9 +425,9 @@ textarea {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .page-footer__item:not(:last-child) {
@@ -902,15 +911,9 @@ textarea {
   overflow-y: scroll;
 }
 
-<<<<<<< Updated upstream
-@media screen and (max-width: 479px), (min-width: 480px) {
-  .backdrop {
-    padding-top: 40px;
-=======
 @media screen and (max-width: 479px) {
   .backdrop {
     padding-top: 93px;
->>>>>>> Stashed changes
     padding-right: 15px;
     padding-left: 15px;
   }
@@ -937,11 +940,7 @@ textarea {
   }
 }
 
-<<<<<<< Updated upstream
-@media screen and (min-width: 768px), (max-width: 767px) {
-=======
 @media screen and (min-width: 768px) {
->>>>>>> Stashed changes
   .order {
     position: absolute;
     top: 50%;
