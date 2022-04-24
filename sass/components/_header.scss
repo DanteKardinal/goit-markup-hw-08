@@ -10,36 +10,70 @@
 }
 
 .page-header__container {
+    @media screen and (max-width: $tablet-max) {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
     @media screen and (min-width: $tablet) {
         display: flex;
         align-items: center;
+    }
+}
+
+.page-header__nav-container {
+    outline: 1px solid tomato;
+    @media screen and (max-width: $tablet-max) {
+        display: none;
+        padding-top: 32px;
+        padding-bottom: 32px;
+        padding-left: 40px;
+
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+
+        background-color: getBgc('primary-white');
+
+        &.is-open {
+            display: block;
+        }
+    }
+
+    @media screen and (min-width: $tablet) {
+        display: flex;
     }
 }
 // Кнопка переключателя мобильного меню
 .nav__btn-mobile {
     @media screen and (max-width: $tablet-max) {
         display: inline-flex;
-    margin: 0;
-    padding: 0;
-    border: none;
-    background-color: transparent;
-    cursor: pointer;
-    transition: fill $animation-transition;
+        margin: 0;
+        padding: 0;
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+        transition: fill $animation-transition;
 
-    &:hover, &:focus {
-        fill: getFill('blue-fill');
+        &:hover, &:focus {
+            fill: getFill('blue-fill');
+        }
+
+        & .nav__icon-cross {
+            display: none;
+        }
+
+        &.is-open .nav__icon-cross {
+            display: block;
+        }
+
+        &.is-open .nav__icon-menu {
+            display: none;
+        }
     }
 
-    & .nav__icon-cross {
-        display: none;
-    }
-    &.is-open .nav__icon-cross {
-        display: block;
-    }
-    &.is-open .nav__icon-menu {
-        display: none;
-    }
-    }
     @media screen and (min-width: $tablet) {
         display: none;
     }
@@ -47,6 +81,9 @@
 
 /* Навигация */
 .nav {
+    @media screen and (max-width: $tablet-max) {
+        margin-bottom: 270px;
+    }
     @media screen and (min-width: $tablet) {
         display: flex;
         align-items: center;
@@ -58,32 +95,26 @@
 }
 
 .nav__list {
-    @media screen and (max-width: $tablet-max) {
-        display: none;
-        position: absolute;
-        top: 100%;
-        left: 0%;
-        width: 100%;
-    }
-    
     @media screen and (min-width: $tablet) {
         display: flex;
     }
 }
 
 .nav__item:not(:last-child) {
-    margin-right: 50px;
+    @media screen and (min-width: $tablet) {
+        margin-right: 50px;
+    }
 }
 
 .nav__link {
     display: block;
-    padding-top: 32px;
 
     font-weight: 500;
-    font-size: 14px;
-    line-height: 1.14;
+    font-size: 40px;
+    line-height: 1.18;
     letter-spacing: 0.02em;
-    color: var(--nohover-navlink-color);
+
+    color: getColorText('text-black');
 
     transition: color $animation-transition;
 
@@ -91,16 +122,29 @@
     &:focus {
         color: getColorText('hover');
     }
+    @media screen and (max-width: $tablet-max) {
+        padding-top: 16px;
+        padding-bottom: 16px;
+    }
 
-    &:not(.nav__current) {
-        padding-bottom: 28px;
+    @media screen and (min-width: $tablet) {
+        padding-top: 32px;
+
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 1.14;
+
+        &:not(.nav__current) {
+            padding-bottom: 28px;
+        }
     }
 }
 /* Подсвечивание текущей страницы */
 .nav__link.nav__current {
     color: getColorText('hover');
 
-    &::after {
+    @media screen and (min-width: $tablet) {
+            &::after {
         content: '';
         margin-top: 28px;
         
@@ -109,11 +153,15 @@
         height: 4px;
         background-color: getColorText('hover');
         border-radius: 2px;
+        }
     }
 }
 
 /* Каналы связи со студией */
 .contacts {
+    @media screen and (max-width: $tablet-max) {
+        margin-bottom: 32px;
+    }
     @media screen and (min-width: $tablet) {
         display: flex;
     }
@@ -122,9 +170,15 @@
     }
 }
 .contacts__item {
-    // @media screen and (max-width: $tablet-max) {
-    //     position: absolute;
-    // }
+    @media screen and (max-width: $tablet-max) {
+        padding-top: 16px;
+        padding-bottom: 16px;
+
+        &.tel {
+            display: none;
+        }
+    }
+    
     @media screen and (min-width: $desktop) {
         &:not(:last-child) {
         margin-right: 30px;
@@ -132,8 +186,29 @@
     }
 }
 
+.contacts__item-tel {
+    @media screen and (max-width: $tablet-max) {
+        font-size: 34px;
+        line-height: 1.18;
+        letter-spacing: 0.02em;
+        
+        color: getColorText('hover');
+    }
+    @media screen and (min-width: $tablet) {
+        display: none;
+    }
+}
+
+.contacts__item.mail {
+    @media screen and (max-width: $tablet-max) {
+        font-size: 24px;
+        line-height: 1.17;
+    }
+}
 
 .contacts__link {
+    display: block;
+
     letter-spacing: 0.02em;
     color: getColorText('primary');
 
@@ -144,12 +219,22 @@
         color: getColorText('hover');
     }
 
+    @media screen and (max-width: $tablet-max) {
+        padding-top: 16px;
+        padding-bottom: 16px;
+
+        &.tel {
+            display: none;
+        }
+    }
+
     @media screen and (min-width: $tablet) {
         display: flex;
         align-items: center;
         padding-top: 5px;
         padding-bottom: 5px;
     }
+
     @media screen and (min-width: $desktop) {
         padding-top: 32px;
         padding-bottom: 32px;
@@ -157,6 +242,42 @@
 }
 
 .contacts__icon {
-    fill: currentColor;
-    margin-right: 11px;
+    @media screen and (max-width: $tablet-max) {
+        display: none;
+    }
+
+    @media screen and (min-width: $tablet) {
+        fill: currentColor;
+        margin-right: 11px;
+    }
+}
+
+// Социальные сети для мобильного меню
+.page-header__social {
+    @media screen and (max-width: $tablet-max) {
+        display: flex;
+        margin-left: -10px;
+
+        font-size: 18px;
+        line-height: 1.22;
+        color: getColorText('hover');
+    }
+
+    @media screen and (min-width: $tablet) {
+        display: none;
+    }
+}
+
+.page-header__social-item:not(:last-child) {
+    border-right: 1px solid rgba(33, 33, 33, 0.2);
+}
+
+.page-header__social-link {
+    display: block;
+    padding-right: 10px;
+    padding-left: 10px;
+    
+    font-size: 18px;
+    line-height: 1.22;
+    color: getColorText('hover');
 }
