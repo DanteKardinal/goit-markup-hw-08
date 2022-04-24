@@ -86,7 +86,7 @@
     @media screen and (min-width: $tablet) {
         display: flex;
         align-items: center;
-        margin-right: 84px;
+        margin-right: 80px;
     }
     @media screen and (min-width: $desktop) {
         margin-right: 300px;
@@ -161,13 +161,18 @@
     @media screen and (max-width: $tablet-max) {
         margin-bottom: 32px;
     }
-    @media screen and (min-width: $tablet) {
-        display: flex;
+
+    @media screen and (max-width: $desktop-max) {
+        padding-top: 16px;
+        padding-bottom: 16px;
     }
+    
     @media screen and (min-width: $tablet), (max-width: $desktop-max) {
+        display: flex;
         flex-wrap: wrap;
     }
 }
+
 .contacts__item {
     @media screen and (max-width: $tablet-max) {
         padding-top: 16px;
@@ -232,11 +237,17 @@
         align-items: center;
         padding-top: 5px;
         padding-bottom: 5px;
+
+        font-size: 12px;
+        line-height: 1.17;
     }
 
     @media screen and (min-width: $desktop) {
         padding-top: 32px;
         padding-bottom: 32px;
+
+        font-size: 14px;
+        line-height: 1.14;
     }
 }
 
@@ -246,8 +257,29 @@
     }
 
     @media screen and (min-width: $tablet) {
+        margin-right: 8px;
+        &.mail {
+            width: 14px;
+            height: 10px;
+        }
+        &.tel {
+            height: 14px;
+        }
+        
         fill: currentColor;
-        margin-right: 11px;
+    }
+
+    @media screen and (min-width: $desktop) {
+        margin-right: 10px;
+
+        &.mail {
+            width: 16px;
+            height: 12px;
+        }
+        
+        &.tel {
+            height: 16px;
+        }
     }
 }
 
