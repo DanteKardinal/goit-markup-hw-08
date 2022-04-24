@@ -8,6 +8,15 @@
 }
 
 .page-header__logo {
+    @media screen and (max-width: $tablet-max) {
+        padding-top: 14px;
+        padding-bottom: 14px;
+    }
+
+    @media screen and (min-width: $tablet) {
+        margin-right: 88px;
+    }
+    
     @media screen and (min-width: $desktop){
         margin-right: 93px;
     }
