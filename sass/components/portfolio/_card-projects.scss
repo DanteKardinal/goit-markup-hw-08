@@ -1,15 +1,26 @@
 .ourproject {
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: calc(-1 * #{$card-set-gap});
-    margin-left: calc(-1 * #{$card-set-gap});
+    @media screen and (max-width: $tablet-max) {
+    }
+
+    @media screen and (min-width: $tablet) {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: calc(-1 * #{$card-set-gap});
+        margin-left: calc(-1 * #{$card-set-gap});
+    }
+}
+
+.ourproject li {
+    @media screen and (max-width: $tablet-max) {
+        &:not(:last-child) {
+            margin-bottom: 30px;
+        }
+    }
 }
 
 .ourproject__link {
     display: inline-block;
-    margin-top: $card-set-gap;
-    margin-left: $card-set-gap;
-    flex-basis: calc(100% / 3 - $card-set-gap);
+
     cursor: pointer;
     transition: box-shadow $animation-transition;
 
@@ -24,7 +35,19 @@
         opacity: 1;
         transform: translateY(0);
     }
+
+
+    
+    @media screen and (min-width:$tablet) {
+        margin-top: $card-set-gap;
+        margin-left: $card-set-gap;
+        flex-basis: calc(100% / 2 - $card-set-gap);
+    }
+    @media screen and (min-width: $desktop) {
+        flex-basis: calc(100% / 3 - $card-set-gap);
+    }
 }
+
 /* Анимированый текст при hover */
 .ourproject__wrap-hover {
     position: relative;
@@ -36,9 +59,7 @@
     width: 100%;
     height: 100%;
     overflow: auto;
-    padding-top: 63px;
     padding-right: 24px;
-    padding-bottom: 63px;
     padding-left: 24px;
 
     position: absolute;
@@ -53,7 +74,23 @@
     letter-spacing: var(--primary-letter-spacing);
     color: getColorText('text-white');
     opacity: 0;
+
+    @media screen and (max-width: $tablet-max) {
+        padding-top: 77px;
+        padding-bottom: 77px;
+    }
+
+    @media screen and (min-width: $tablet) {
+        padding-top: 49px;
+        padding-bottom: 77px;
+    }
+
+    @media screen and (min-width: $desktop) {
+        padding-top: 63px;
+        padding-bottom: 63px;
+    }
 }
+
 /* Название и описание карточки проекта */
 .ourproject__wrap {
     padding-top: 20px;
