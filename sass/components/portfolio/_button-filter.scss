@@ -2,14 +2,21 @@
     display: flex;
     @media screen and (max-width: $tablet-max) {
         flex-wrap: wrap;
+        margin-bottom: 25px;
     }
     
-    @media screen and (min-width: $desktop) {
+    @media screen and (min-width: $tablet) {
         justify-content: center;
-    margin-bottom: 50px;
+        margin-bottom: 30px;
+    }
+    @media screen and (min-width: $desktop) {
+        margin-bottom: 50px;
     }
 }
 
+.filter-project__item {
+    margin-bottom: 15px;
+}
 .filter-project__item:not(:last-child) {
     margin-right: 8px;
 }
