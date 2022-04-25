@@ -5,28 +5,57 @@
 .hero {
     margin-left: auto;
     margin-right: auto;
+    padding-top: 118px;
+    padding-bottom: 118px;
+    
+    height: 400px;
 
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 
-    @media screen and (min-width: 480px) {
-        padding-top: 118px;
-        padding-bottom: 118px;
-        max-width: 480px;
-        height: 400px;
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4));
 
-        background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-480.jpg);
+    @media screen and (max-width: $tablet-max) {
+        max-width: 480px;
+
+        background-image: url(../images/hero/hero-480@1.jpg);
+
+        @media (min-device-pixel-ratio: 2),
+        (-webkit-min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+            background-image: url(../images/hero/hero-480@2.jpg);
+        }
     }
 
-    @media screen and (min-width: 1200px) {
+    @media screen and (min-width: $tablet) {
+        max-width: 768px;
+
+        background-image: url(../images/hero/hero-768@1.jpg);
+
+        @media (min-device-pixel-ratio: 2),
+        (-webkit-min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+            background-image: url(../images/hero/hero-768@2.jpg);
+        }
+    }
+
+    @media screen and (min-width: $desktop) {
         padding-top: 200px;
         padding-bottom: 200px;
         max-width: 1600px;
         height: 600px;
 
-        background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-        url(../images/hero.jpg);
+        background-image: url(../images/hero/hero-1200@1.jpg);
+
+        @media (min-device-pixel-ratio: 2),
+        (-webkit-min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+            background-image: url(../images/hero/hero-1200@2.jpg);
+        }
     }
 }
 
@@ -43,13 +72,13 @@
 
     color: getColorText('text-white');
 
-    @media screen and (min-width: 480px) {
+    @media screen and (max-width: $desktop-max) {
         width: 360px;
         font-size: 26px;
         line-height: 1.62;
     }
 
-    @media screen and (min-width: 1200px) {
+    @media screen and (min-width: $desktop) {
         width: 696px;
         font-size: 44px;
         line-height: 1.36;
