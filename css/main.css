@@ -163,10 +163,11 @@ textarea {
     padding-bottom: 32px;
     padding-left: 40px;
     position: absolute;
-    top: 100%;
+    top: 0;
     left: 0;
     width: 100%;
     background-color: #ffffff;
+    z-index: 1;
   }
   .page-header__nav-container.is-open {
     display: block;
@@ -193,6 +194,7 @@ textarea {
     cursor: pointer;
     -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 2;
   }
   .nav__btn-mobile:hover, .nav__btn-mobile:focus {
     fill: #2196f3;

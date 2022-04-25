@@ -30,11 +30,13 @@
         padding-left: 40px;
 
         position: absolute;
-        top: 100%;
+        top: 0;
         left: 0;
         width: 100%;
 
         background-color: getBgc('primary-white');
+
+        z-index: 1;
 
         &.is-open {
             display: block;
@@ -55,6 +57,8 @@
         background-color: transparent;
         cursor: pointer;
         transition: fill $animation-transition;
+
+        z-index: 2;
 
         &:hover, &:focus {
             fill: getFill('blue-fill');
