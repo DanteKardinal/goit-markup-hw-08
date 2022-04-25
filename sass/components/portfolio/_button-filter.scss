@@ -1,7 +1,13 @@
 .filter-project {
     display: flex;
-    justify-content: center;
+    @media screen and (max-width: $tablet-max) {
+        flex-wrap: wrap;
+    }
+    
+    @media screen and (min-width: $desktop) {
+        justify-content: center;
     margin-bottom: 50px;
+    }
 }
 
 .filter-project__item:not(:last-child) {
