@@ -166,51 +166,50 @@
         margin-bottom: 32px;
     }
 
-    @media screen and (max-width: $desktop-max) {
-        padding-top: 16px;
-        padding-bottom: 16px;
-    }
-    
     @media screen and (min-width: $tablet), (max-width: $desktop-max) {
         display: flex;
         flex-wrap: wrap;
+    }
+    
+    @media screen and (max-width: $desktop-max) {
+        padding-top: 16px;
+        padding-bottom: 16px;
     }
 }
 
 .contacts__item {
     @media screen and (max-width: $tablet-max) {
+        display: block;
         padding-top: 16px;
         padding-bottom: 16px;
 
         &.tel {
             display: none;
         }
+
+        &.mail {
+            font-size: 24px;
+            line-height: 1.17;
+        }
+
+        &.mobile-tel {
+            font-size: 34px;
+            line-height: 1.18;
+            letter-spacing: 0.02em;
+
+            color: getColorText('hover');
+        }
     }
-    
+
+    @media screen and (min-width: $tablet) {
+        &.mobile-tel {
+            display: none;   
+        }
+    }
     @media screen and (min-width: $desktop) {
         &:not(:last-child) {
         margin-right: 30px;
         }
-    }
-}
-
-.contacts__item-tel {
-    @media screen and (max-width: $tablet-max) {
-        font-size: 34px;
-        line-height: 1.18;
-        letter-spacing: 0.02em;
-        
-        color: getColorText('hover');
-    }
-    @media screen and (min-width: $tablet) {
-        display: none;
-    }
-}
-
-.contacts__item.mail {
-    @media screen and (max-width: $tablet-max) {
-        font-size: 24px;
-        line-height: 1.17;
     }
 }
 
