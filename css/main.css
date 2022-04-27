@@ -959,7 +959,6 @@ textarea {
 }
 
 .team__item {
-  outline: 2px solid tomato;
   margin: 15px;
   background-color: #ffffff;
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -1514,9 +1513,10 @@ textarea {
 }
 
 .ourproject__subtitle {
+  white-space: pre;
   font-weight: bold;
   font-size: 18px;
-  line-height: 36px;
+  line-height: 2;
   letter-spacing: 0.06em;
   color: #212121;
 }
@@ -1525,7 +1525,7 @@ textarea {
   margin-top: 4;
   color: #757575;
   font-size: 16px;
-  line-height: 30px;
+  line-height: 1.86;
   letter-spacing: 0.03em;
 }
 /*# sourceMappingURL=main.css.map */
