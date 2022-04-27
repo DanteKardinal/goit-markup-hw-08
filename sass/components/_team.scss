@@ -9,6 +9,7 @@
 }
 
 .team__item {
+    outline: 2px solid tomato;
     margin: 15px;
 
     background-color: getBgc('primary-white');
