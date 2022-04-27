@@ -333,8 +333,7 @@ textarea {
 @media screen and (max-width: 767px) {
   .contacts__item {
     display: block;
-    padding-top: 16px;
-    padding-bottom: 16px;
+    width: 100%;
   }
   .contacts__item.tel {
     display: none;
@@ -342,18 +341,6 @@ textarea {
   .contacts__item.mail {
     font-size: 24px;
     line-height: 1.17;
-  }
-  .contacts__item.mobile-tel {
-    font-size: 34px;
-    line-height: 1.18;
-    letter-spacing: 0.02em;
-    color: #2196f3;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .contacts__item.mobile-tel {
-    display: none;
   }
 }
 
@@ -383,6 +370,12 @@ textarea {
   .contacts__link.tel {
     display: none;
   }
+  .contacts__link.mobile-tel {
+    font-size: 34px;
+    line-height: 1.18;
+    letter-spacing: 0.02em;
+    color: #2196f3;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -397,6 +390,9 @@ textarea {
     padding-bottom: 5px;
     font-size: 12px;
     line-height: 1.17;
+  }
+  .contacts__link.mobile-tel {
+    display: none;
   }
 }
 
