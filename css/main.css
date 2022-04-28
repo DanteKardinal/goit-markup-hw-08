@@ -493,27 +493,21 @@ textarea {
   }
 }
 
+@media screen and (max-width: 767px) {
+  .page-footer__contacts {
+    margin-bottom: 60px;
+  }
+}
+
 @media screen and (max-width: 1199px) {
   .page-footer__contacts {
     text-align: center;
   }
 }
 
-@media screen and (max-width: 1199px) {
-  .page-footer__contacts {
-    margin-bottom: 60px;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .page-footer__contacts {
-    display: inline-block;
-    margin-right: 165px;
-  }
-}
-
 @media screen and (min-width: 1200px) {
   .page-footer__contacts {
+    display: inline-block;
     margin-right: 70px;
   }
 }
@@ -532,12 +526,28 @@ textarea {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
     -webkit-box-align: baseline;
         -ms-flex-align: baseline;
             align-items: baseline;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .pade-footer__tablet-container {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .pade-footer__tablet-container {
+    margin-bottom: 60px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .pade-footer__tablet-container {
+    margin-right: 93px;
   }
 }
 
@@ -570,18 +580,6 @@ textarea {
 }
 
 /* Социальные сети футера */
-@media screen and (max-width: 767px) {
-  .page-footer__socials {
-    margin-bottom: 60px;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .page-footer__socials {
-    margin-right: 93px;
-  }
-}
-
 .page-footer__list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -589,6 +587,9 @@ textarea {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
 }
 
 .page-footer__item:not(:last-child) {

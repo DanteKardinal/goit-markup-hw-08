@@ -10,23 +10,21 @@
     }
     @media screen and (min-width: $desktop) {
         display: flex;
-        align-items: baseline; 
+        align-items: baseline;
     }
 
 }
 
 .page-footer__contacts {
+    @media screen and (max-width: $tablet-max) {
+        margin-bottom: 60px;
+    }
     @media screen and (max-width: $desktop-max) {
         text-align: center;
     }
-    @media screen and (max-width: $desktop-max) {
-        margin-bottom: 60px;
-    }
-    @media screen and (min-width: $tablet) {
-        display: inline-block;
-        margin-right: 165px;
-    }
+
     @media screen and (min-width: $desktop) {
+        display: inline-block;
         margin-right: 70px;
     }
 }
@@ -44,8 +42,19 @@
 .pade-footer__tablet-container {
     @media screen and (min-width: $tablet) {
         display: flex;
-        justify-content: center;
         align-items: baseline;
+    }
+
+    @media screen and (min-width: $tablet) and (max-width: $desktop-max) {
+        justify-content: space-around;
+    }
+
+    @media screen and (max-width: $desktop-max) {
+        margin-bottom: 60px;
+    }
+
+    @media screen and (min-width: $desktop) {
+        margin-right: 93px;
     }
 }
 
@@ -82,19 +91,10 @@
 }
 
 /* Социальные сети футера */
-.page-footer__socials {
-    @media screen and (max-width: $tablet-max) {
-        margin-bottom: 60px;
-    }
-       
-    @media screen and (min-width: $desktop) {
-        margin-right: 93px;
-    }
-}
-
 .page-footer__list {
     display: flex;
     justify-content: center;
+    align-items: baseline;
 }
 
 .page-footer__item:not(:last-child) {
