@@ -1418,8 +1418,30 @@ textarea {
 }
 
 @media screen and (max-width: 767px) {
-  .ourproject li:not(:last-child) {
+  .ourproject__item:not(:last-child) {
     margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .ourproject__item {
+    margin-top: 30px;
+    margin-left: 30px;
+    -ms-flex-preferred-size: calc(100% / 2 - $card-set-gap);
+        flex-basis: calc(100% / 2 - $card-set-gap);
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .ourproject__item {
+    width: 354px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .ourproject__item {
+    -ms-flex-preferred-size: calc(100% / 3 - $card-set-gap);
+        flex-basis: calc(100% / 3 - $card-set-gap);
   }
 }
 
@@ -1442,22 +1464,6 @@ textarea {
   opacity: 1;
   -webkit-transform: translateY(0);
           transform: translateY(0);
-}
-
-@media screen and (min-width: 768px) {
-  .ourproject__link {
-    margin-top: 30px;
-    margin-left: 30px;
-    -ms-flex-preferred-size: calc(100% / 2 - $card-set-gap);
-        flex-basis: calc(100% / 2 - $card-set-gap);
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .ourproject__link {
-    -ms-flex-preferred-size: calc(100% / 3 - $card-set-gap);
-        flex-basis: calc(100% / 3 - $card-set-gap);
-  }
 }
 
 /* Анимированый текст при hover */
@@ -1522,8 +1528,19 @@ textarea {
   border-left: 1px solid #eeeeee;
 }
 
+@media screen and (max-width: 767px), (min-width: 1200px) {
+  .ourproject__wrap {
+    padding-bottom: 20px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .ourproject__wrap:first-child {
+    padding-bottom: 56px;
+  }
+}
+
 .ourproject__subtitle {
-  white-space: pre;
   font-weight: bold;
   font-size: 18px;
   line-height: 2;
