@@ -1529,13 +1529,7 @@ textarea {
 }
 
 @media screen and (max-width: 767px), (min-width: 1200px) {
-  .ourproject__wrap {
-    padding-bottom: 20px;
-  }
-}
-
-@media screen and (min-width: 768px) and (max-width: 1199px) {
-  .ourproject__wrap:first-child {
+  .ourproject__wrap:nth-child(1) {
     padding-bottom: 56px;
   }
 }

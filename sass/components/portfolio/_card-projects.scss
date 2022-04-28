@@ -106,16 +106,12 @@
     border-left: 1px solid $border-card-color;
 
     @media screen and (max-width: $tablet-max), (min-width: $desktop) {
-        padding-bottom: 20px;
+        &:nth-child(1) {
+            padding-bottom: 56px;
+        }
     }
 }
 
-.ourproject__wrap:first-child {
-    @media screen and (min-width: $tablet) and (max-width: $desktop-max) {
-        padding-bottom: 56px;
-    }
-    
-}
 .ourproject__subtitle {
     font-weight: bold;
     font-size: 18px;
