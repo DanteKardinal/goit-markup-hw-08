@@ -172,6 +172,7 @@ textarea {
   }
   .page-header__nav-container.is-open {
     display: block;
+    height: 5600px;
   }
 }
 
@@ -1350,7 +1351,7 @@ textarea {
   .filter-project {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    margin-bottom: 25px;
+    margin-bottom: 40px;
   }
 }
 
@@ -1369,8 +1370,10 @@ textarea {
   }
 }
 
-.filter-project__item {
-  margin-bottom: 15px;
+@media screen and (max-width: 767px) {
+  .filter-project__item:not(:nth-child(n + 4)) {
+    margin-bottom: 15px;
+  }
 }
 
 .filter-project__item:not(:last-child) {
