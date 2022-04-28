@@ -2,7 +2,7 @@
     display: flex;
     @media screen and (max-width: $tablet-max) {
         flex-wrap: wrap;
-        margin-bottom: 25px;
+        margin-bottom: 40px;
     }
     
     @media screen and (min-width: $tablet) {
@@ -14,8 +14,10 @@
     }
 }
 
-.filter-project__item {
-    margin-bottom: 15px;
+.filter-project__item:not(:nth-child(n + 4)) {
+    @media screen and (max-width: $tablet-max) {
+        margin-bottom: 15px;
+    }
 }
 .filter-project__item:not(:last-child) {
     margin-right: 8px;
