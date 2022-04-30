@@ -32,15 +32,18 @@
         position: absolute;
         top: 0;
         left: 0;
-        width: 100%;
+        width: 100vw;
 
         background-color: getBgc('primary-white');
 
         z-index: 1;
 
         &.is-open {
-            display: block;
-            height: 5600px;
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+
+            height: 100vh;
         }
     }
 
@@ -85,9 +88,6 @@
 
 /* Навигация */
 .nav {
-    @media screen and (max-width: $tablet-max) {
-        margin-bottom: 270px;
-    }
     @media screen and (min-width: $tablet) {
         display: flex;
         align-items: center;
