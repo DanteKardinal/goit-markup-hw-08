@@ -29,7 +29,7 @@
     padding: 40px;
 
     max-width: 450px;
-    max-height: 609px;
+    max-height: 100%;
     width: 100%;
 
     background-color: getBgc('primary-white');
@@ -151,6 +151,7 @@
     letter-spacing: $primary-letter-spacing;
 
     @media screen and (max-width: $desktop-max) {
+        flex-wrap: wrap;
         font-size: 12px;
         line-height: 1.16;
     }
@@ -189,6 +190,10 @@
 
     transition: border-color $animation-transition, background-color $animation-transition,
     background-image $animation-transition;
+}
+
+.order__text-checkbox {
+    text-align: center;
 }
 
 .order__link {
