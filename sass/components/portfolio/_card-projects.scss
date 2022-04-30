@@ -18,6 +18,7 @@
     }
 
     @media screen and (min-width:$tablet) {
+        display: flex;
         margin-top: $card-set-gap;
         margin-left: $card-set-gap;
         flex-basis: calc(100% / 2 - $card-set-gap);
@@ -48,6 +49,11 @@
     &:focus .ourproject__text-hover {
         opacity: 1;
         transform: translateY(0);
+    }
+
+    @media screen and (min-width:$tablet) {
+        display: flex;
+        flex-direction: column;
     }
 }
 
@@ -105,10 +111,8 @@
     border-bottom: 1px solid $border-card-color;
     border-left: 1px solid $border-card-color;
 
-    @media screen and (max-width: $tablet-max), (min-width: $desktop) {
-        &:nth-child(1) {
-            padding-bottom: 56px;
-        }
+    @media screen and (min-width: $tablet) {
+        flex-grow: 1;
     }
 }
 
